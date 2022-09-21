@@ -34,7 +34,7 @@ const config = {
       ({
         docs: {
           routeBasePath: '/', // 把文档放在网站根部
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: require.resolve('./sidebars.ts'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
@@ -59,19 +59,23 @@ const config = {
         },
         items: [
           {
-            type: 'dropdown',
-            docId: 'intro',
+            type: 'doc',
+            docId: 'JavaScript/JS语句',
             position: 'left',
             label: 'JavaScript',
+          },
+          {
+            type:'dropdown', 
+            label: 'Network',
+            position: 'left',
             items:[
               {
                 type:'doc',
-                docId: 'greeting',
-                label:'test'
+                label:'计算机网络',
+                docId:'Network/计算机网络/应用层'
               }
             ]
           },
-          {to: '/', label: 'NCRE', position: 'left'},
           {
             href: 'https://github.com/QHP1015',
             label: 'GitHub',
@@ -128,6 +132,12 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
+      docs:{
+        sidebar: {
+          // hideable: true,
+          autoCollapseCategories: true,
+        }
+      }
     }),
 };
 

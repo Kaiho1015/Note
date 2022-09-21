@@ -1,13 +1,10 @@
 ---
-id: greeting
 title: JS迭代器与生成器
-author: 从此在回忆里
-date: 2021-10-30 14:08:06
-tags: 
-  - 前端学习 
-  - JavaScript
 ---
 
+可迭代对象及其相关的迭代器是 ES6 的一个特性，数组（包括 Typed Array）、字符串、Set 对象和 Map 对象都是可迭代的，即可以通过 `for/of` 循环来迭代
+
+<!--more-->
 
 迭代器让 `...` 操作符能展开或“扩展”可迭代对象，如
 
@@ -389,3 +386,4 @@ generator.next()            // => { value: "done", done: true}
 // 如果生成器已经完成，则不再返回值
 generator.next()            // => { value: undefined, done: true}
 ```
+
