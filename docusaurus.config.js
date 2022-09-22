@@ -83,51 +83,51 @@ const config = {
           },
         ],
       },
-      footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                href: 'https://qhp.us',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/QHP1015',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} QHP\'s Note.`,
-      },
+      // footer: {
+      //   style: 'dark',
+      //   links: [
+      //     {
+      //       title: 'Docs',
+      //       items: [
+      //         {
+      //           label: 'Tutorial',
+      //           to: '/docs/intro',
+      //         },
+      //       ],
+      //     },
+      //     {
+      //       title: 'Community',
+      //       items: [
+      //         {
+      //           label: 'Stack Overflow',
+      //           href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+      //         },
+      //         {
+      //           label: 'Discord',
+      //           href: 'https://discordapp.com/invite/docusaurus',
+      //         },
+      //         {
+      //           label: 'Twitter',
+      //           href: 'https://twitter.com/docusaurus',
+      //         },
+      //       ],
+      //     },
+      //     {
+      //       title: 'More',
+      //       items: [
+      //         {
+      //           label: 'Blog',
+      //           href: 'https://qhp.us',
+      //         },
+      //         {
+      //           label: 'GitHub',
+      //           href: 'https://github.com/QHP1015',
+      //         },
+      //       ],
+      //     },
+      //   ],
+      //   copyright: `Copyright © ${new Date().getFullYear()} QHP\'s Note.`,
+      // },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,

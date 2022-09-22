@@ -28,7 +28,17 @@ const sidebars = {
     },
   ],
    */
+  
+      // type: 'html',
+      // value: '<img src="docusaurus.png" alt="Sponsor" />', // 要渲染的 HTML
+      // defaultStyle: true, // 使用默认的菜单项目样式
+
   JavaScript: [
+    {
+      type: 'html',
+      value: 'JavaScript',
+      className: 'sidebar-title',
+    },
     doc("JavaScript/JS语句", "JS语句"),
     doc("JavaScript/JS数组", "JS数组"),
     doc("JavaScript/JS异步", "JS异步"),
@@ -36,6 +46,11 @@ const sidebars = {
     doc("JavaScript/JS类型、值和变量", "JS类型、值和变量"),
     doc("JavaScript/JS类", "JS类"),
     // doc("JavaScript/JS函数", "JS函数"),
+    // category("JavaScript/JS函数", "JS函数", [
+    //   doc("JavaScript/JS函数/函数定义", "函数定义"),
+    //   doc("JavaScript/JS函数/函数调用", "函数调用"),
+    //   doc("JavaScript/JS函数/形参与实参", "形参与实参"),
+    // ]),
     category("JavaScript/JS函数", "JS函数", [
       doc("JavaScript/JS函数/函数定义", "函数定义"),
       doc("JavaScript/JS函数/函数调用", "函数调用"),
@@ -67,7 +82,7 @@ function category(id, label, items) {
     collapsible: true,
     collapsed: true,
     link: {
-      type: "doc",
+      // type: "doc",
       id: id,
     },
     items: items,
