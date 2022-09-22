@@ -33,4 +33,4 @@ jobs:
           port: ${{ secrets.PORT }}
           source: "./build"
           target: "/www/wwwroot/qianhaipeng.com/note"
-          strip_components: 1
+          strip_components: 2
