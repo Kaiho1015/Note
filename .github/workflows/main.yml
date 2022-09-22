@@ -24,12 +24,12 @@ jobs:
         run: npm run build
 
       # 利用action把build好的文件上传到服务器/var/www/react-app路径下,需要确认此目录已在服务端创建
-      - name: deploy file to server
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
-        with:  
-          username: 'root'   #ssh user name
-          port: ${{ secrets.PORT }}
-          server: '${{ secrets.SERVER_IP }}' #引用之前创建好的secret
-          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }} #引用之前创建好的secret
-          local_path: './note/*'  # 对应我们项目build的文件夹路径
-          remote_path: '/www/wwwroot/qianhaipeng.com'
+     - name: copy file via ssh password
+      uses: appleboy/scp-action@master
+      with:
+        host: ${{ secrets.SERVER_IP }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        port: ${{ secrets.PORT }}
+        source: "/build"
+        target: ${{secrets.FILE}}
