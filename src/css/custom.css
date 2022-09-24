@@ -5,7 +5,7 @@
  */
 
 /* You can override the default Infima variables here. */
-:root {
+/* :root {
   --ifm-color-primary: #2e8555;
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
@@ -15,10 +15,28 @@
   --ifm-color-primary-lightest: #3cad6e;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+} */
+
+:root {
+  --ifm-color-primary: #3687ba;
+  --ifm-color-primary-dark: #3179a7;
+  --ifm-color-primary-darker: #2e739e;
+  --ifm-color-primary-darkest: #265e82;
+  --ifm-color-primary-light: #4093c8;
+  --ifm-color-primary-lighter: #4a99ca;
+  --ifm-color-primary-lightest: #66a8d2;
+  --ifm-color-primary-background:#fff;
+  --ifm-font-color-base-index:rgba(8, 8, 8,.8);
 }
 
+.docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
 /* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
+/* [data-theme='dark'] {
   --ifm-color-primary: #25c2a0;
   --ifm-color-primary-dark: #21af90;
   --ifm-color-primary-darker: #1fa588;
@@ -27,4 +45,31 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+} */
+
+[data-theme='dark'] {
+  --ifm-color-primary: #9cc3ec;
+  --ifm-color-primary-dark: #7bafe6;
+  --ifm-color-primary-darker: #6ba5e3;
+  --ifm-color-primary-darkest: #3987d9;
+  --ifm-color-primary-light: #bdd7f2;
+  --ifm-color-primary-lighter: #cde1f5;
+  --ifm-color-primary-lightest: #ffffff;
+  --ifm-color-primary-background: rgba(27,27,30,0.8);
+  --ifm-font-color-base-index:#E3E3E3;
+
 }
+
+html[data-theme='dark'] .docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.hero--primary {
+  --ifm-hero-background-color: var(--ifm-color-primary-background);
+  --ifm-hero-text-color: var(--ifm-font-color-base-index);
+}
+
+/* .hero--primary {
+  --ifm-hero-background-color: var(--ifm-color-primary);
+  --ifm-hero-text-color: var(--ifm-font-color-base-inverse);
+} */

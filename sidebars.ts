@@ -62,6 +62,11 @@ const sidebars = {
   ],
 
   network:[
+    {
+      type: 'html',
+      value: '计算机网络',
+      className: 'sidebar-title',
+    },
     doc("Network/计算机网络/应用层", "应用层"),
   ]
 };

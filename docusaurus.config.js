@@ -8,11 +8,11 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Kaiho',
   tagline: 'Let life be beautiful like summer flowers and death like autumn leaves. -- Tagore',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'qianhaipeng.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/logo.jpg',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -37,8 +37,8 @@ const config = {
           sidebarPath: require.resolve('./sidebars.ts'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          // editUrl:
+          //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: false,
         theme: {
@@ -52,10 +52,11 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'QHP',
+        title: 'Kaiho',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          src: 'img/logo.jpg',
+          style:{borderRadius:'50%'}
         },
         items: [
           {
@@ -129,8 +130,9 @@ const config = {
       //   copyright: `Copyright © ${new Date().getFullYear()} QHP\'s Note.`,
       // },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        // theme: lightCodeTheme,
+        // darkTheme: darkCodeTheme,
+        theme: require('prism-react-renderer/themes/vsDark'),
       },
       docs:{
         sidebar: {
@@ -141,12 +143,9 @@ const config = {
       algolia: {
         // Algolia 提供的应用 ID
         appId: 'JVHZ8FHB9I',
-  
         //  公开 API 密钥：提交它没有危险
         apiKey: 'bf816047486a86b1bb3ca0419720d919',
-  
         indexName: 'Kaiho-note',
-  
         // 可选：见下文
         contextualSearch: true,
   
