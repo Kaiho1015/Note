@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Kaiho',
   tagline: 'Let life be beautiful like summer flowers and death like autumn leaves. -- Tagore',
-  url: 'qianhaipeng.com',
+  url: 'https://www.qianhaipeng.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
