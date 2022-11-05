@@ -23,13 +23,16 @@ const config = {
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'zh',
+    locales: ['zh'],
   },
+
+  // 插件
+  plugins: ['docusaurus-plugin-sass'],
 
   presets: [
     [
-      'classic',
+      '@docusaurus/preset-classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
@@ -42,7 +45,7 @@ const config = {
         },
         blog: false,
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: [require.resolve('./src/css/custom.scss')],
         },
       }),
     ],
@@ -61,7 +64,7 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'JavaScript/JS语句',
+            docId: 'JavaScript/JS词法结构',
             position: 'left',
             label: 'JavaScript',
           },
@@ -73,13 +76,13 @@ const config = {
               {
                 type:'doc',
                 label:'计算机网络',
-                docId:'Network/计算机网络/应用层'
+                docId:'Network/计算机网络/计算机网络和因特网'
               }
             ]
           },
           {
+            className: "header-github-link",
             href: 'https://github.com/QHP1015',
-            label: 'GitHub',
             position: 'right',
           },
         ],
