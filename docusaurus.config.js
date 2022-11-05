@@ -23,8 +23,8 @@ const config = {
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'zh',
-    locales: ['zh'],
+    defaultLocale: 'en',
+    locales: ['en'],
   },
 
   // 插件
@@ -38,6 +38,13 @@ const config = {
         docs: {
           routeBasePath: '/', // 把文档放在网站根部
           sidebarPath: require.resolve('./sidebars.ts'),
+          include: ["**/*.md", "**/*.mdx"],
+          exclude: [
+            "**/_*.{js,jsx,ts,tsx,md,mdx}",
+            "**/_*/**",
+            "**/*.test.{js,jsx,ts,tsx}",
+            "**/__tests__/**",
+          ],
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           // editUrl:

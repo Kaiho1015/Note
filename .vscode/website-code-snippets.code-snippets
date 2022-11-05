@@ -1,0 +1,28 @@
+{
+  // .mdx
+  "Import Component Table": {
+    "prefix": "itb",
+    "body": ["import Table from \"@site/src/components/Table\"", "$0"],
+    "description": "Insert a Table component import statement"
+  },
+  "Table": {
+    "prefix": "tb",
+    "body": [
+      "<Table",
+      "  data={{",
+      "    position: [\"start\", \"center\"],",
+      "    header: [\"\", \"\"],",
+      "    body: [",
+      "        [",
+      "          \"\",",
+      "          \"\",",
+      "        ],",
+      "       ],",
+      "    footer: [\"\", \"\"],",
+      "    caption: ,",
+      "    }}",
+      "/>"
+    ],
+    "description": "Insert a Table component"
+  },
+}
