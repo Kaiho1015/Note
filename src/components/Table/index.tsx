@@ -1,4 +1,4 @@
-import React, { CSSProperties, ReactNode } from "react";
+import React, { CSSProperties, ReactNode, useEffect } from "react";
 import styles from "./styles.module.css";
 import clsx from "clsx";
 import { isMobile } from "@site/src/utils/funcUtils";
@@ -46,10 +46,16 @@ export default function Table({
       textAlign: position,
     };
   };
+  let mobile;
+
+  useEffect(()=>{
+    mobile = isMobile() ? mobileWrapperStyle : wrapperStyle
+  })
+
   return (
     <div
-      className={clsx(styles.tableAreaWrapper, wrapperClassName)}
-      style={isMobile() ? mobileWrapperStyle : wrapperStyle}
+    className={clsx(styles.tableAreaWrapper, wrapperClassName)}
+    style={mobile}
     >
       <div className={styles.tableArea}>
         <table role="table">
