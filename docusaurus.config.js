@@ -70,10 +70,22 @@ const config = {
         },
         items: [
           {
-            type: 'doc',
-            docId: 'JavaScript/JS词法结构',
+            type:'dropdown', 
+            label: 'Language',
             position: 'left',
-            label: 'JavaScript',
+            items:[
+              {
+                type:'doc',
+                label:'JavaScript',
+                docId:'Language/JavaScript/JS词法结构'
+              },
+              {
+                type:'doc',
+                label:'TypeScript',
+                docId:'Language/TypeScript/TypeScript基础'
+              },
+
+            ]
           },
           {
             type:'dropdown', 
@@ -84,6 +96,23 @@ const config = {
                 type:'doc',
                 label:'计算机网络',
                 docId:'Network/计算机网络/计算机网络和因特网'
+              }
+            ]
+          },
+          {
+            className: "header-github-link",
+            href: 'https://github.com/QHP1015',
+            position: 'right',
+          },
+          {
+            type:'dropdown', 
+            label: 'Graphics',
+            position: 'left',
+            items:[
+              {
+                type:'doc',
+                label:'Three.js',
+                docId:'Graphics/Three.js/Three.js基础'
               }
             ]
           },
