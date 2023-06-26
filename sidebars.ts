@@ -11,13 +11,17 @@ const sidebars = {
       type: "category",
       label: "JS类型",
       items: [
-        category("基本数据类型", [
-          doc("Language/JavaScript/JS类型/基本数据类型/Number", "Number"),
-          doc("Language/JavaScript/JS类型/基本数据类型/String", "String"),
-          doc("Language/JavaScript/JS类型/基本数据类型/Boolean", "Boolean"),
-          doc("Language/JavaScript/JS类型/基本数据类型/null与undefined", "null与undefined"),
-          doc("Language/JavaScript/JS类型/基本数据类型/Symbol", "Symbol"),
-        ]),
+        category(
+          "基本数据类型",
+          [
+            doc("Language/JavaScript/JS类型/基本数据类型/Number", "Number"),
+            doc("Language/JavaScript/JS类型/基本数据类型/String", "String"),
+            doc("Language/JavaScript/JS类型/基本数据类型/Boolean", "Boolean"),
+            doc("Language/JavaScript/JS类型/基本数据类型/null与undefined", "null与undefined"),
+            doc("Language/JavaScript/JS类型/基本数据类型/Symbol", "Symbol"),
+          ],
+          ""
+        ),
         doc("Language/JavaScript/JS类型/类型转换", "类型转换"),
         doc("Language/JavaScript/JS类型/对象引用", "对象引用"),
         doc("Language/JavaScript/JS类型/解构赋值", "解构赋值"),
@@ -39,24 +43,32 @@ const sidebars = {
     doc("Language/JavaScript/JS语句", "JS语句"),
     doc("Language/JavaScript/JS对象", "JS对象"),
     doc("Language/JavaScript/JS数组", "JS数组"),
-    category("JS函数", [
-      doc("Language/JavaScript/JS函数/函数定义", "函数定义"),
-      doc("Language/JavaScript/JS函数/函数调用", "函数调用"),
-      doc("Language/JavaScript/JS函数/形参与实参", "形参与实参"),
-      doc("Language/JavaScript/JS函数/作为值或命名空间", "作为值或命名空间"),
-      doc("Language/JavaScript/JS函数/闭包", "闭包"),
-      doc("Language/JavaScript/JS函数/属性和方法", "属性和方法"),
-      doc("Language/JavaScript/JS函数/函数式编程", "函数式编程"),
-    ]),
+    category(
+      "JS函数",
+      [
+        doc("Language/JavaScript/JS函数/函数定义", "函数定义"),
+        doc("Language/JavaScript/JS函数/函数调用", "函数调用"),
+        doc("Language/JavaScript/JS函数/形参与实参", "形参与实参"),
+        doc("Language/JavaScript/JS函数/作为值或命名空间", "作为值或命名空间"),
+        doc("Language/JavaScript/JS函数/闭包", "闭包"),
+        doc("Language/JavaScript/JS函数/属性和方法", "属性和方法"),
+        doc("Language/JavaScript/JS函数/函数式编程", "函数式编程"),
+      ],
+      ""
+    ),
     doc("Language/JavaScript/JS类", "JS类"),
     doc("Language/JavaScript/JS模块", "JS模块"),
     doc("Language/JavaScript/JS迭代器与生成器", "JS迭代器与生成器"),
-    category("JS异步", [
-      doc("Language/JavaScript/JS异步/回调函数", "回调函数"),
-      doc("Language/JavaScript/JS异步/Promise", "Promise"),
-      doc("Language/JavaScript/JS异步/async和await", "async和await"),
-      doc("Language/JavaScript/JS异步/异步迭代", "异步迭代"),
-    ]),
+    category(
+      "JS异步",
+      [
+        doc("Language/JavaScript/JS异步/回调函数", "回调函数"),
+        doc("Language/JavaScript/JS异步/Promise", "Promise"),
+        doc("Language/JavaScript/JS异步/async和await", "async和await"),
+        doc("Language/JavaScript/JS异步/异步迭代", "异步迭代"),
+      ],
+      ""
+    ),
   ],
 
   Network: [
@@ -90,13 +102,7 @@ const sidebars = {
   ],
 };
 
-interface IDoc {
-  type:string;
-  id: string;
-  label: string;
-}
-
-function doc(id: string, label: string): IDoc {
+function doc(id, label) {
   return {
     type: "doc",
     id: id,
@@ -104,19 +110,7 @@ function doc(id: string, label: string): IDoc {
   };
 }
 
-interface Category {
-  type: "category";
-  label: string;
-  collapsible: boolean;
-  collapsed: boolean;
-  link?: {
-    // type?: "doc";
-    id?: string;
-  };
-  items: (IDoc | Category)[];
-}
-
-function category(label: string, items: (IDoc | Category)[], id?: string): Category {
+function category(label, items, id) {
   return id
     ? {
         type: "category",
@@ -137,4 +131,5 @@ function category(label: string, items: (IDoc | Category)[], id?: string): Categ
         items: items,
       };
 }
+
 module.exports = sidebars;

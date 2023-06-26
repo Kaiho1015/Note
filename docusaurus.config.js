@@ -100,11 +100,6 @@ const config = {
             ]
           },
           {
-            className: "header-github-link",
-            href: 'https://github.com/QHP1015',
-            position: 'right',
-          },
-          {
             type:'dropdown', 
             label: 'Graphics',
             position: 'left',
