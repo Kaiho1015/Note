@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
     # 如果你想要进一步定义触发条件、路径等，可以查看文档
     # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
 
@@ -32,5 +33,5 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
           source: "./build"
-          target: "/www/wwwroot/qianhaipeng.com"
+          target: "/opt/1panel/apps/openresty/openresty/www/sites/qhp.us/index"
           strip_components: 2
