@@ -25,7 +25,8 @@ const sidebars: SidebarsConfig = {
       link: { type: "generated-index" },
       items: [
         'language/Python/python-basic',
-        'language/Python/python-data-type'
+        'language/Python/python-data-type',
+        'language/Python/indexing-andslicing'
       ]
     },
   ],
