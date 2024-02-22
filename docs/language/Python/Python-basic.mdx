@@ -1,0 +1,172 @@
+---
+id: python-basic
+slug: /python-basic
+title: Python 基础语法
+data: 2023-09-16
+authors: Kaiho
+tags: [python, language]
+keywords: [python, language]
+---
+
+Python的基础语法分为以下几个
+
+- 缩进
+- 注释
+- 变量
+- 输出
+- 输入
+
+
+
+## 缩进
+
+一个逻辑行开头处的空白被用来计算该行的缩进等级，以决定语句段落的组织结构
+
+:::note
+
+Python 主要依靠缩进来确定组织结构
+
+```python
+x = 3
+if x < 4:
+  print("Yes")
+else:
+  print("No")
+  
+print("这与if语句无关，在缩进外面")
+```
+
+:::
+
+
+
+## 注释
+
+- 单行注释：以 `#` 开头
+- 多行注释：三引号（单 `'''` 、双`"""`）将注释内容包起来
+
+
+
+## 变量
+
+变量需要先定义，当解释器执行到定义变量的代码时，会自动申请内存空间用于存放变量值，然后将变量值的**内存地址**绑定给变量名
+
+变量的定义由三部分组成`a = b`：
+
+- `a` ：变量名，指向值所在的内存地址
+- `=` ：赋值符号，将内存地址绑定到变量名
+- `b` ：变量值，即内存地址对应存储的数据
+
+变量命名规范：
+
+- 可以包括字母、数字和下划线
+
+- 变量名不能以数字开头
+
+- 不能使用 Python 的关键字及内置函数名作变量名
+
+  > :::note
+  >
+  > 关键字查询：
+  >
+  > ```python
+  > # 方法一
+  > help("keywords")
+  > ```
+  >
+  > ```python
+  > # 方法二
+  > import keyword
+  > 
+  > print(keyword.kwlist)
+  > ```
+  >
+  > 内置函数查询：
+  >
+  > ```python
+  > import builtins
+  > 
+  > print(dir(builtins))
+  > ```
+  >
+  > :::
+
+- 推荐：驼峰命名法
+
+  - 大驼峰：MyClassmate
+  - 小驼峰：myClassmate
+
+
+
+## 输出
+
+`print(*objects, sep=' ', end='\n', file=sys.stdout, flush=False)`
+
+- `objects` ：输出的对象，当输出多个对象时，需要用 `,` 分隔，对象会被转成字符串再输出
+
+- `sep` ：输出的对象用什么间隔开来，默认为一个空格
+
+- `end` ：输出最后用什么结尾，默认值是换行符 `\n`
+
+- `file`：要写入的文件对象，默认为`sys.stdout`，指向控制台
+
+  > :::note
+  >
+  > Python 有个标准模块为 sys
+  >
+  > ```python
+  > import sys
+  > ```
+  >
+  > :::
+
+- `flush`：输出是否被缓存，如果 `flush` 参数为 `True`，会被强制刷新
+
+```python
+# 示例1：打印单个值，默认换行
+print("Hello")
+
+# 示例2：打印多个值，用逗号分隔
+print("Hello", "world")
+
+# 示例3：打印多个值，用指定的分隔符分隔
+print("apple", "banana", "orange", sep=', ')
+
+# 示例4：指定结束符为感叹号
+print("Hello", end='!')
+print("world")
+
+# 示例5：将内容输出到文件
+with open('output.txt', 'w') as f:
+    print("Writing to file", file=f)
+
+```
+
+```python
+import time
+
+# 打印一系列数字，并在每个数字打印之后暂停一秒钟
+for i in range(1, 6):
+    print(f"Counting: {i}", end='\n', flush=True) # flush为True时，一行一行打印，flush为False时，一次性打印
+    time.sleep(1)  # 暂停一秒钟
+
+print("\nCounting finished!")  # 完成计数后换行打印
+
+```
+
+:::tip
+
+flush 设置在 Pycharm 里不生效，看效果可以用 Anaconda 终端
+
+:::
+
+
+
+## 输入
+
+`input([prompt])`
+
+- `prompt` ：提示信息函数接受一个标准输入数据，返回为 `string` 类型
+
+
+
