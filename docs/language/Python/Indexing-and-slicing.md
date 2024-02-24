@@ -1,6 +1,6 @@
 ---
-id: indexing-andslicing
-slug: /python-data-type
+id: indexing-and-slicing
+slug: /indexing-and-slicing
 title: 索引和切片
 data: 2023-09-18
 authors: Kaiho

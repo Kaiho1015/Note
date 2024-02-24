@@ -26,7 +26,7 @@ const sidebars: SidebarsConfig = {
       items: [
         'language/Python/python-basic',
         'language/Python/python-data-type',
-        'language/Python/indexing-andslicing'
+        'language/Python/indexing-and-slicing'
       ]
     },
   ],
