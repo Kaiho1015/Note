@@ -1,6 +1,6 @@
 ---
 id: python-data-type
-slug: /python-data-type
+slug: /python/python-data-type
 title: Python 标准数据类型
 data: 2023-09-17
 authors: Kaiho

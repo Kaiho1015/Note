@@ -26,7 +26,10 @@ const sidebars: SidebarsConfig = {
       items: [
         'language/Python/python-basic',
         'language/Python/python-data-type',
-        'language/Python/indexing-and-slicing'
+        'language/Python/indexing-and-slicing',
+        'language/Python/assignment-and-copying',
+        'language/Python/operator',
+        'language/Python/derivation',
       ]
     },
   ],
