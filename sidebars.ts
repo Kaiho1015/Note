@@ -30,6 +30,9 @@ const sidebars: SidebarsConfig = {
         'language/Python/assignment-and-copying',
         'language/Python/operator',
         'language/Python/derivation',
+        'language/Python/iteration-problem',
+        'language/Python/python-function',
+        'language/Python/packaging-and-unpacking',
       ]
     },
   ],
