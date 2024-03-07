@@ -33,6 +33,8 @@ const sidebars: SidebarsConfig = {
         'language/Python/iteration-problem',
         'language/Python/python-function',
         'language/Python/packaging-and-unpacking',
+        'language/Python/namespaces-and-scopes',
+        'language/Python/object-oriented',
       ]
     },
   ],
