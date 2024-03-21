@@ -43,7 +43,7 @@ print(person1.greet())  # Hello, my name is Alice and I am 30 years old.
 
 当创建类的新实例时，`__init__`方法会自动被调用
 
-在`__init__`被调用之前还有一个魔术方法——`法__new__(cls, *args, **kwargs)`，用于创建对象并返回对象实例
+在`__init__`被调用之前还有一个魔术方法——`__new__(cls, *args, **kwargs)`，用于创建对象并返回对象实例
 
 :::
 
@@ -267,7 +267,7 @@ print_greet(employee1) # Hello, my name is Bob and I am 40 years old.
 
 **封装**（Encapsulation）是将对象的数据（属性）和代码（方法）绑定在一起，并对外隐藏对象的具体实现细节，只暴露有限的接口供外部访问
 
-在Python中，可以通过使用私有属性和方法来实现封装，可以提供一个非私有方法在类的外部间接访问私有属性或私有方法
+在Python中，可以通过使用私有属性和方法来实现封装，访问私有属性或私有方法可以通过提供一个非私有方法在类的外部间接访问
 
 :::note
 

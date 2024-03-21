@@ -35,6 +35,8 @@ const sidebars: SidebarsConfig = {
         'language/Python/packaging-and-unpacking',
         'language/Python/namespaces-and-scopes',
         'language/Python/object-oriented',
+        'language/Python/errors-and-exceptions',
+        'language/Python/magic-method',
       ]
     },
   ],
