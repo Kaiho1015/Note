@@ -23,7 +23,7 @@ const social: Social = {
   // twitter: 'https://twitter.com/kuizuo',
   // juejin: 'https://juejin.cn/user/1565318510545901',
   // qq: 'https://img.kuizuo.cn/qq.png',
-  wx: "https://kaiho.cc/recharge-chatgpt-plus/weixin.png",
+  wx: "https://kaiho.cc/wp-content/uploads/2024/02/weixin3.jpg",
   // zhihu: 'https://www.zhihu.com/people/kuizuo',
   // cloudmusic: 'https://music.163.com/#/user/home?id=1333010742',
   email: "mailto:pastqian@outlook.com",
