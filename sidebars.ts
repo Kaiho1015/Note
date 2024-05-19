@@ -38,6 +38,7 @@ const sidebars: SidebarsConfig = {
         'language/Python/errors-and-exceptions',
         'language/Python/magic-method',
         'language/Python/closures-and-decorators',
+        'language/Python/python-iteration-mechanism',
       ]
     },
   ],
