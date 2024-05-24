@@ -39,6 +39,8 @@ const sidebars: SidebarsConfig = {
         'language/Python/magic-method',
         'language/Python/closures-and-decorators',
         'language/Python/python-iteration-mechanism',
+        'language/Python/module-and-package',
+        'language/Python/python-io',
       ]
     },
   ],
