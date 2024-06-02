@@ -41,6 +41,7 @@ const sidebars: SidebarsConfig = {
         'language/Python/python-iteration-mechanism',
         'language/Python/module-and-package',
         'language/Python/python-io',
+        'language/Python/regular-expression',
       ]
     },
   ],
