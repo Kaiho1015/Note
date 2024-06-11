@@ -498,4 +498,15 @@ print(matches)  # 输出：['123']
 
 `Pattern.findall(string[, pos[, endpos]])`
 
-- 
+- 对字符串从左往右扫描，找到所有不重复匹配，以列表的形式返回（保存子串），如果有多个组（至少两个子组），则返回元组列表，如果没有找到匹配的，则返回空列表
+
+  ```python
+  import re
+  
+  pattern = re.compile(r'\d+')
+  text = "12 abc 34 def 56"
+  matches = pattern.findall(text)
+  print(matches)  # 输出: ['12', '34', '56']
+  ```
+
+  

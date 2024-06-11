@@ -8,7 +8,7 @@ const config: Config = {
   favicon: 'img/logo.jpg',
   scripts: [
     {
-      src: "http://45.78.34.209:1916/script.js",
+      src: "https://umami.qhp.us/script.js",
       defer: true,
       'data-website-id': "471b3c74-5054-4b03-bbb0-1f379b60c917"
     }
