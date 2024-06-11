@@ -1,12 +1,18 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Kaiho\'s Note',
   tagline: 'Let life be beautiful like summer flowers and death like autumn leaves. -- Tagore',
   favicon: 'img/logo.jpg',
-
+  scripts: [
+    {
+      src: "http://45.78.34.209:1916/script.js",
+      defer: true,
+      'data-website-id': "471b3c74-5054-4b03-bbb0-1f379b60c917"
+    }
+  ],
   // Set the production url of your site here
   url: 'https://www.qhp.us',
   // Set the /<baseUrl>/ pathname under which your site is served
@@ -30,7 +36,7 @@ const config: Config = {
   },
 
   // plugins
-  plugins:[
+  plugins: [
     'docusaurus-plugin-sass'
   ],
 
@@ -39,7 +45,7 @@ const config: Config = {
       'classic',
       {
         docs: {
-          path:'docs',
+          path: 'docs',
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -68,11 +74,11 @@ const config: Config = {
           sidebarId: 'languageSidebar',
           position: 'left',
           label: '编程语言',
-          items:[
+          items: [
             {
-              type:'doc',
-              label:'Python',
-              docId:'/category/python'
+              type: 'doc',
+              label: 'Python',
+              docId: '/category/python'
             }
           ]
         },
