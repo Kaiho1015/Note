@@ -13,6 +13,7 @@ const config: Config = {
       'data-website-id': "471b3c74-5054-4b03-bbb0-1f379b60c917"
     }
   ],
+  themes: ['@docusaurus/theme-live-codeblock'],
   // Set the production url of your site here
   url: 'https://www.qhp.us',
   // Set the /<baseUrl>/ pathname under which your site is served

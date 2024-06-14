@@ -373,11 +373,65 @@ keywords: [python, language]
       print(match.group(1))  # 输出第一个捕获组的内容, 即 '42'
   ```
 
+
+
+
+`(?:...)`
+
+- 非捕获分组，所匹配的子字符串不能在执行匹配后被获取或是之后在模式中被引用
+
+- 常用于优化正则表达式的性能，或者当需要使用分组进行逻辑组合但不需要捕获分组内容时使用
+
+  ```py
+  import re
+  
+  pattern = re.compile(r'(?:\d+)[a-z]')
+  text = "123abc"
+  match = pattern.search(text)
+  if match:
+      print(match.group())  # 输出: '3a'
+  ```
+
   
 
+`(?=...)`
+
+- 前向肯定界定符（前瞻断言）
+
+- 仅用于检查其后的字符是否符合断言内的正则表达式
+
+- 如果符合，正则表达式继续匹配后面的内容；如果不符合，则匹配失败，即使到目前为止的匹配是成功的
+
+  ```py
+  import re
+  
+  # (?= euros) 表示匹配的数字后面必须紧跟着 " euros" 文本，但 " euros" 不会包括在匹配结果中。
+  pattern = re.compile(r'\d+(?= euros)')
+  text = "100 euros"
+  match = pattern.search(text)
+  if match:
+      print(match.group())  # 输出: '100'
+  ```
 
 
 
+`(?!...)`
+
+- 前向否定界定符（否定前瞻断言）
+
+- 检查后续的字符**不符合**断言内的正则表达式
+
+- 如果后续字符不符合断言内的正则，匹配继续；如果符合，则整个匹配失败
+
+  ```py
+  import re
+  
+  pattern = re.compile(r'\d+(?! euros)')
+  text = "100 dollars"
+  match = pattern.search(text)
+  if match:
+      print(match.group())  # 输出: '100'
+  ```
 
 
 
@@ -414,7 +468,180 @@ print(match_question)  # 输出: ['?']
 
 `\number`
 
-- 引用先前定义的捕获组
+- 引用先前定义的捕获组，匹配number代表的分组里面的内容
+
+- 在 [ 和 ] 字符集内，任何数字转义都被看作是字符
+
+  ```py
+  import re
+  
+  pattern = re.compile(r'(\w+) \1')
+  text = "hello hello"
+  match = pattern.search(text)
+  if match:
+      print(match.group())  # 输出: 'hello hello'
+  ```
+
+
+
+
+
+`\A`
+
+- 匹配字符串的开始
+
+- 与 `^` 类似，但 `\A` 严格匹配整个字符串的起始位置，不受多行模式 (`re.M` 或 `re.MULTILINE`) 的影响，而 `^` 在多行模式下可以匹配每一行的起始位置
+
+  ```py
+  import re
+  
+  pattern = re.compile(r'\AThe')
+  text = "The start of a text"
+  match = pattern.search(text)
+  if match:
+      print("Match found at the start of the string")  # 输出: Match found at the start of the string
+  ```
+
+  
+
+`\b`
+
+- 单词边界锚点，它用来匹配一个单词字符与一个非单词字符之间的位置
+
+  ```py
+  import re
+  
+  pattern = re.compile(r'\bword\b')
+  text = "word and wordy"
+  match = pattern.findall(text)
+  print(match)  # 输出: ['word']
+  ```
+
+
+
+`\B` 
+
+- 匹配非单词边界的位置
+
+- 匹配位于单词字符之间的位置，而不是单词与非单词字符之间的边界
+
+  ```py
+  import re
+  
+  pattern = re.compile(r'\Bion\B')
+  text = "The ionosphere layer is significant."
+  matches = pattern.findall(text)
+  print(matches)  # 输出: ['ion']
+  ```
+
+
+
+`\d`
+
+- 匹配任何阿拉伯数字字符，等同于 `[0-9]`
+
+  ```py
+  import re
+  
+  pattern = re.compile(r'\d+')
+  text = "The year 2021"
+  matches = pattern.findall(text)
+  print(matches)  # 输出: ['2021']
+  ```
+
+
+
+`\D`
+
+- 匹配任何非数字字符，当于 `[^0-9]`
+
+  ```py
+  import re
+  
+  pattern = re.compile(r'\D+')
+  text = "Room 101"
+  matches = pattern.findall(text)
+  print(matches)  # 输出: ['Room ']
+  ```
+
+
+
+`\s`
+
+- 匹配任何空白字符，包括空格、制表符、换行符等，相当于字符集 `[ \t\n\r\f\v]`，
+
+  ```py
+  import re
+  
+  pattern = re.compile(r'\s+')
+  text = "Hello, World! How are you?"
+  matches = pattern.findall(text)
+  print(matches)  # 输出: [' ', ' ', ' ', ' ']
+  ```
+
+
+
+`\S`
+
+- 匹配任何非空白字符
+
+  ```py
+  import re
+  
+  pattern = re.compile(r'\S+')
+  text = "Hello, World! How are you?"
+  matches = pattern.findall(text)
+  print(matches)  # 输出: ['Hello,', 'World!', 'How', 'are', 'you?']
+  ```
+
+
+
+`\w`
+
+- 匹配任何单词字符，包括字母、数字和下划线，相当于字符集 `[a-zA-Z0-9_]`
+
+
+
+`\W`
+
+- `\W` 用于匹配任何非单词字符，是 `\w` 的反义，相当于 `[^a-zA-Z0-9_]`
+
+  ```py
+  import re
+  
+  pattern_w = re.compile(r'\w+')
+  pattern_W = re.compile(r'\W+')
+  
+  text = "Hello, World! How_are_you?"
+  
+  matches_w = pattern_w.findall(text)
+  matches_W = pattern_W.findall(text)
+  
+  print("Word characters:", matches_w)  # 输出: ['Hello', 'World', 'How_are_you']
+  print("Non-word characters:", matches_W)  # 输出: [', ', '! ', '?']
+  ```
+
+
+
+`\Z`
+
+- 匹配字符串的结束位置，与 `$` 类似，但在多行模式下，`\Z` 仅匹配整个字符串的最末尾，而不是每一行的末尾
+
+  ```py
+  import re
+  
+  pattern = re.compile(r'end\Z')
+  text = "This is the end"
+  match = pattern.search(text)
+  if match:
+      print("Match found at the end of the string")  # 输出: Match found at the end of the string
+  ```
+
+
+
+`\n \t \\ \' \"`
+
+- Python的标准转义字符也被正则表达式分析器支持
 
 
 
@@ -498,7 +725,9 @@ print(matches)  # 输出：['123']
 
 `Pattern.findall(string[, pos[, endpos]])`
 
-- 对字符串从左往右扫描，找到所有不重复匹配，以列表的形式返回（保存子串），如果有多个组（至少两个子组），则返回元组列表，如果没有找到匹配的，则返回空列表
+- 对字符串从左往右扫描，找到所有匹配正则表达式的非重叠匹配项，以列表的形式返回（保存子串），如果有多个组（至少两个子组），则返回元组列表，如果没有找到匹配的，则返回空列表
+
+- 如果有捕获分组，找子组匹配的内容；如果没有捕获分组，找0组匹配的内容
 
   ```python
   import re
@@ -507,6 +736,220 @@ print(matches)  # 输出：['123']
   text = "12 abc 34 def 56"
   matches = pattern.findall(text)
   print(matches)  # 输出: ['12', '34', '56']
+  ```
+
+
+
+`Pattern.finditer(string[, pos[, endpos]])`
+
+- 同`findall`，以迭代器形式返回
+
+- 每个匹配项都是一个`Match`对象，包含匹配的详细信息
+
+  ```py
+  import re
+  
+  pattern = re.compile(r'\d+')
+  text = "Example 1234 with more numbers 5678"
+  matches = pattern.finditer(text)
+  for match in matches:
+      print(match.group(), match.start(), match.end())
+  ```
+
+
+
+`Pattern.split(string, maxsplit=0)`
+
+- `maxsplit`：指定最大分割次数，如果为0（默认值），则表示不限制分割次数
+
+- 如果正则表达式中包含捕获分组，那么分割结果中将包括这些捕获分组匹配到的内容，如果匹配到字符串的开始或者结尾，则会存在空字符串
+
+- 按照匹配的子串将字符串分割，以列表形式返回
+
+  ```py
+  import re
+  
+  pattern = re.compile(r'(\d+)')
+  text = "Hello123world456bye"
+  result = pattern.split(text)
+  print(result)  # 输出: ['Hello', '123', 'world', '456', 'bye']
+  ```
+
+  
+
+`Pattern.sub(repl, string, count=0)`
+
+- `repl`：替换用的字符串或一个函数。
+
+  - 如果是字符串，可以包含反向引用如`\1`等；
+  - 如果是函数，则该函数接收一个`Match`对象作为参数，并返回一个字符串
+
+- `string`：要进行替换操作的原始字符串。
+
+- `count`：最大替换次数，默认为0，表示替换所有匹配项
+
+  ```py
+  import re
+  
+  pattern = re.compile(r'\d+')
+  text = "There are 123 apples and 456 oranges"
+  replacement = "many"
+  result = pattern.sub(replacement, text)
+  print(result)  # 输出: "There are many apples and many oranges"
+  
+  
+  def repl_func(match):
+      # 将匹配的数字乘以 2
+      return str(int(match.group(0)) * 2)
+  
+  
+  result = pattern.sub(repl_func, text)
+  print(result)  # 输出: "There are 246 apples and 912 oranges"
+  ```
+
+  
+
+`Pattern.subn(repl, string, count=0)`
+
+- 同`Pattern.sub()`，返回一个元组，其中第一个元素是替换后的字符串，第二个元素是实际进行的替换次数
+
+  ```py
+  import re
+  
+  pattern = re.compile(r'\d+')
+  text = "There are 123 apples and 456 oranges"
+  replacement = "many"
+  result, num_subs = pattern.subn(replacement, text)
+  print(result)  # 输出: "There are many apples and many oranges"
+  print("Number of substitutions made:", num_subs)  # 输出: Number of substitutions made: 2
+  ```
+
+  
+
+
+
+### `Match`对象方法
+
+`Match.group([group1, ...])`
+
+- `groupN`：对应的组号，默认为 0，返回整个匹配结果
+
+- 如果指定了一个或多个组号，返回这些组对应的内容，如果有多个参数，结果就是一个元组
+
+  ```py
+  import re
+  
+  pattern = re.compile(r'(\d+).(\d+)')
+  match = pattern.search("The numbers are 123.456")
+  print(match.group())  # 输出: '123.456'
+  print(match.group(1))  # 输出: '123'
+  print(match.group(2))  # 输出: '456'
+  print(match.group(1, 2))  # 输出: ('123', '456')
+  ```
+
+  
+
+`Match.groups(default=None)`
+
+- 返回一个包含所有捕获组内容的元组
+
+- 如果某个组没有在匹配的文本中找到匹配项，那么对应的元组位置将填充为`None`，若指定了`default`参数，这时未匹配的组将填充为`default`指定的值
+
+  ```py
+  import re
+  
+  pattern = re.compile(r'(\d+).(\d+)?')
+  match = pattern.search("The number is 123")
+  print(match.groups())  # 输出: ('123', None) 因为第二个组没有匹配
+  print(match.groups(default="Not matched"))  # 输出: ('123', 'Not matched')
+  ```
+
+
+
+`Match.start([group])`
+
+- 返回指定组匹配的起始位置的索引
+
+- 如果没有指定组号，默认为0，即返回整个匹配的起始位置
+
+- 如果指定的组没有找到匹配，则返回`-1`
+
+  ```py
+  import re
+  
+  pattern = re.compile(r'(\d+).(\d+)')
+  match = pattern.search("The numbers are 123.456")
+  print(match.start())  # 输出: 17
+  print(match.start(1))  # 输出: 17
+  print(match.start(2))  # 输出: 21
+  ```
+
+
+
+`Match.end([group])`
+
+- 返回指定组匹配的结束位置的索引
+
+  ```py
+  import re
+  
+  pattern = re.compile(r'(\d+).(\d+)')
+  match = pattern.search("The numbers are 123.456")
+  print(match.end())  # 输出: 22
+  print(match.end(1))  # 输出: 20
+  print(match.end(2))  # 输出: 22
+  ```
+
+  
+
+`Match.span([group])`
+
+- 返回一个元组，其中包含了指定组匹配的起始和结束位置的索引
+
+  ```py
+  import re
+  
+  pattern = re.compile(r'(\d+).(\d+)')
+  match = pattern.search("The numbers are 123.456")
+  print(match.span())  # 输出: (17, 22)
+  print(match.span(1))  # 输出: (17, 20)
+  print(match.span(2))  # 输出: (21, 22)
+  ```
+
+  
+
+### 编译标志
+
+在Python的正则表达式中，编译标志（flags）用于修改匹配行为，在编译时通过`re.compile(flages=re.M)`函数设置
+
+常见的编译标志包括：
+
+- `re.IGNORECASE`（或 `re.I`）：使匹配对大小写不敏感。
+
+- `re.MULTILINE`（或 `re.M`）：使 `^` 和 `$` 能够分别匹配每行的开始和结束。
+
+- `re.DOTALL`（或 `re.S`）：使点号（`.`）能够匹配包括换行符在内的所有字符。
+
+- `re.ASCII`（或 `re.A`）：使 `\w`, `\W`, `\b`, `\B`, `\d`, `\D`, `\s` 和 `\S` 只匹配ASCII字符。
+
+- `re.X` （或 `re.VERBOSE`）：可以编写更加清晰和易于理解的正则表达式，可以在正则表达式中添加空格、缩进和注释，这些都会在处理正则表达式时被忽略掉，不影响其功能
+
+  ```py
+  import re
+  
+  pattern = re.compile(r"""
+      ^(\d{3})     # 区号
+      [- ]?        # 可选的分隔符
+      (\d{3})      # 前三位数字
+      [- ]?        # 可选的分隔符
+      (\d{4})      # 后四位数字
+      $            # 字符串结束
+      """, re.X)
+  
+  text = "123-456-7890"
+  match = pattern.search(text)
+  if match:
+      print(match.groups())  # 输出: ('123', '456', '7890')
   ```
 
   

@@ -42,6 +42,7 @@ const sidebars: SidebarsConfig = {
         'language/Python/module-and-package',
         'language/Python/python-io',
         'language/Python/regular-expression',
+        'language/Python/numpy',
       ]
     },
   ],
