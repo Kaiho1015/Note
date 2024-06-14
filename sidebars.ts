@@ -43,6 +43,7 @@ const sidebars: SidebarsConfig = {
         'language/Python/python-io',
         'language/Python/regular-expression',
         'language/Python/numpy',
+        'language/Python/pandas',
       ]
     },
   ],

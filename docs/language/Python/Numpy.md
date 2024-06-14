@@ -1124,35 +1124,35 @@ print(arr[..., 0])  # 输出每个二维数组的第一列
 `np.greater_equal(x1, x2)`
 
 - 逐元素比较两个数组
-- 同`np.greater(x1, x2)`，但是按元素判断 x1 >= x2 的结果
+- 同`np.greater(x1, x2)`，但是按元素判断 `x1 >= x2` 的结果
 
 
 
 `np.less(x1, x2)`
 
 - 逐元素比较两个数组
-- 同`np.greater(x1, x2)`，但是按元素判断 x1 < x2 的结果
+- 同`np.greater(x1, x2)`，但是按元素判断 `x1 < x2` 的结果
 
 
 
 `np.less_equal(x1, x2)`
 
 - 逐元素比较两个数组
-- 同`np.greater(x1, x2)`，但是按元素判断 x1 <= x2 的结果
+- 同`np.greater(x1, x2)`，但是按元素判断 `x1 <= x2` 的结果
 
 
 
 `np.equal(x1, x2)`
 
 - 逐元素比较两个数组
-- 同`np.greater(x1, x2)`，但是按元素判断 x1 == x2 的结果
+- 同`np.greater(x1, x2)`，但是按元素判断 `x1 == x2` 的结果
 
 
 
 `np.not_equal(x1, x2)`
 
 - 逐元素比较两个数组
-- 同`np.greater(x1, x2)`，但是按元素判断 x1 != x2 的结果
+- 同`np.greater(x1, x2)`，但是按元素判断 `x1 != x2` 的结果
 
 
 
@@ -1265,7 +1265,7 @@ print(arr[..., 0])  # 输出每个二维数组的第一列
 
   输出：
 
-  ```py
+  ```lua
   数组的最大值: 18
   沿轴 0 的最大值:
    [[13 14 15]
