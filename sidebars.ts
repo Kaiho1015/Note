@@ -44,6 +44,7 @@ const sidebars: SidebarsConfig = {
         'language/Python/regular-expression',
         'language/Python/numpy',
         'language/Python/pandas',
+        'language/Python/matplotlib',
       ]
     },
   ],
