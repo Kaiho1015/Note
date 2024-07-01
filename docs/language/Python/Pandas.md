@@ -2,7 +2,7 @@
 id: pandas
 slug: /python/pandas
 title: Pandas
-data: 2023-10-1
+data: 2023-10-01
 authors: Kaiho
 tags: [python, language]
 keywords: [python, language]
@@ -593,10 +593,10 @@ Pandas DataFrame 结构图：
    `set_index(keys, drop, append, inplace, verify_integrity)` 是 Pandas DataFrame 的一个方法，用于将 DataFrame 的一个或多个列设置为索引
 
    - `keys`：要设置为索引的列标签或列标签列表。
-   - `drop`：是否从 DataFrame 中删除这些列。默认为 True。
-   - `append`：是否将这些列添加到现有索引，而不是替换它们。默认为 False。
-   - `inplace`：是否在原地修改 DataFrame。默认为 False。
-   - `verify_integrity`：是否检查新索引的唯一性。默认为 False
+   - `drop`：是否从 DataFrame 中删除这些列。默认为 `True`
+   - `append`：是否将这些列添加到现有索引，而不是替换它们。默认为 `False`
+   - `inplace`：是否在原地修改 DataFrame。默认为 `False`
+   - `verify_integrity`：是否检查新索引的唯一性。默认为 `False`
 
    :::
 
@@ -936,7 +936,7 @@ dtype: int64
   - 'inner' 进行内连接（取交集）
   - 默认值为 'outer'
 
-- `ignore_index`：布尔值，是否忽略原来的索引并重新生成索引。默认值为 False
+- `ignore_index`：布尔值，是否忽略原来的索引并重新生成索引。默认值为 `False`
 
   ```python
   import pandas as pd
@@ -1103,7 +1103,7 @@ dtype: int64
 
 - `columns`：直接指定要删除的列标签
 
-- `inplace`：布尔值，是否在原地修改 DataFrame，默认值为 False
+- `inplace`：布尔值，是否在原地修改 DataFrame，默认值为 `False`
 
   ```
   import pandas as pd
@@ -1138,7 +1138,7 @@ dtype: int64
 - `how`：{'any', 'all'}，'any' 表示只要有一个缺失值就删除，'all' 表示全部为缺失值时才删除
 - `thresh`：要求保留的非缺失值的数量，设置这个参数将忽略 `how` 参数，只保留至少`n`个非`NaN`值的行或列，`n`由该参数指定
 - `subset`：指定需要检查缺失值的行或列标签
-- `inplace`：布尔值，是否在原地修改 DataFrame，默认值为 False
+- `inplace`：布尔值，是否在原地修改 DataFrame，默认值为 `False`
 
 
 
@@ -1150,7 +1150,7 @@ dtype: int64
   - `'pad'/'ffill'` 表示用前一个非缺失值去填充该缺失值
   - `'backfill'/'bfill'` 表示用后一个非缺失值填充该缺失值
 - `axis`：指定填充的轴，0 为填充行，1 为填充列
-- `inplace`：布尔值，是否在原地修改 DataFrame，默认值为 False
+- `inplace`：布尔值，是否在原地修改 DataFrame，默认值为 `False`
 - `limit`：填充的最大数量
 
 
@@ -1216,7 +1216,7 @@ dtype: int64
 
 - `frac`：要抽取的样本占比（`n` 和 `frac` 两个参数只能指定一个）
 
-- `replace`：布尔值，是否允许重复抽样，默认值为 False
+- `replace`：布尔值，是否允许重复抽样，默认值为 `False`
 
 - `random_state`：整数或 `numpy.random.RandomState`，用于保证抽样的可重复性
 
@@ -1271,8 +1271,8 @@ dtype: int64
 
 - 用于删除 DataFrame 中的重复行
 - `subset`：用于识别重复行的列标签或标签序列，默认值为 None，即所有列
-- `keep`：{'first', 'last', False}，指定保留哪一重复值。'first' 保留第一次出现的重复值，'last' 保留最后一次出现的重复值，False 删除所有重复值
-- `inplace`：布尔值，是否在原地修改 DataFrame，默认值为 False
+- `keep`：`{'first', 'last', False}`，指定保留哪一重复值。'first' 保留第一次出现的重复值，'last' 保留最后一次出现的重复值，`False` 删除所有重复值
+- `inplace`：布尔值，是否在原地修改 DataFrame，默认值为 `False`
 
 
 
