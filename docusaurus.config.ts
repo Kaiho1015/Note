@@ -1,6 +1,8 @@
 import { themes as prismThemes } from 'prism-react-renderer';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 
 const config: Config = {
   title: 'Kaiho\'s Note',
@@ -48,6 +50,8 @@ const config: Config = {
         docs: {
           path: 'docs',
           sidebarPath: './sidebars.ts',
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex],
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           // editUrl:
@@ -84,6 +88,19 @@ const config: Config = {
           ]
         },
         {
+          type: 'dropdown',
+          sidebarId: 'MLSidebar',
+          position: 'left',
+          label: '人工智能',
+          items: [
+            {
+              type: 'doc',
+              label: '机器学习',
+              docId: '/category/machine-learning'
+            }
+          ]
+        },
+        {
           href: 'https://github.com/QHP1015',
           className: "header-github-link",
           position: 'right',
@@ -102,6 +119,16 @@ const config: Config = {
       darkTheme: prismThemes.vsDark,
     },
   } satisfies Preset.ThemeConfig,
+
+  stylesheets: [
+    {
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
+      type: 'text/css',
+      integrity:
+        'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
+      crossorigin: 'anonymous',
+    },
+  ],
 };
 
 export default config;

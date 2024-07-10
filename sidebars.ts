@@ -22,7 +22,10 @@ const sidebars: SidebarsConfig = {
     {
       label: "Python",
       type: "category",
-      link: { type: "generated-index" },
+      link: {
+        type: "generated-index",
+        image: '/img/Python.png',
+      },
       items: [
         'language/Python/python-basic',
         'language/Python/python-data-type',
@@ -48,6 +51,18 @@ const sidebars: SidebarsConfig = {
       ]
     },
   ],
+
+  MLSiderbar: [
+    {
+      label: "Machine Learning",
+      type: "category",
+      link: { type: "generated-index", },
+      items: [
+        'ai/ml/overview',
+        'ai/ml/linear-regression',
+      ]
+    },
+  ]
   // But you can create a sidebar manually
   /*
   tutorialSidebar: [
