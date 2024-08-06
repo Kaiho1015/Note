@@ -60,6 +60,8 @@ const sidebars: SidebarsConfig = {
       items: [
         'ai/ml/overview',
         'ai/ml/linear-regression',
+        'ai/ml/logistic-regression',
+        'ai/ml/svm',
       ]
     },
   ]
