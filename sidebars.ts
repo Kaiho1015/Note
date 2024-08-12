@@ -62,6 +62,8 @@ const sidebars: SidebarsConfig = {
         'ai/ml/linear-regression',
         'ai/ml/logistic-regression',
         'ai/ml/svm',
+        'ai/ml/naive-bayes',
+        'ai/ml/decision-tree',
       ]
     },
   ]
