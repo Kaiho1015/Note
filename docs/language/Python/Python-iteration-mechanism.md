@@ -4,8 +4,8 @@ slug: /python/python-iteration-mechanism
 title: Python 迭代机制
 data: 2023-09-29
 authors: Kaiho
-tags: [python, language]
-keywords: [python, language]
+tags: [Python, language]
+keywords: [Python, language]
 ---
 ## 可迭代对象
 

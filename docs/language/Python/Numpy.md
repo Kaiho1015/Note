@@ -4,8 +4,8 @@ slug: /python/numpy
 title: Numpy
 data: 2023-10-1
 authors: Kaiho
-tags: [python, language]
-keywords: [python, language]
+tags: [Python, language]
+keywords: [Python, language]
 
 ---
 NumPy（Numerical Python）是 Python 进行科学计算的一个扩展库，提供了大量的函数和操作，主要用于对**多维数组**执行计算，它比 Python 自身的嵌套列表结构要高效的多

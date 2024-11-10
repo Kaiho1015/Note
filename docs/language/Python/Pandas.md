@@ -4,8 +4,8 @@ slug: /python/pandas
 title: Pandas
 data: 2023-10-01
 authors: Kaiho
-tags: [python, language]
-keywords: [python, language]
+tags: [Python, language]
+keywords: [Python, language]
 ---
 
 Pandas 是基于 NumPy 的 Python 扩展库，用于数据分析。它可以快速从不同格式的文件（如 CSV、Excel 文件）中加载数据，并将其转换为可处理的对象

@@ -4,8 +4,8 @@ slug: /python/matplotlib
 title: Matplotlib
 data: 2023-10-02
 authors: Kaiho
-tags: [python, language]
-keywords: [python, language]
+tags: [Python, language]
+keywords: [Python, language]
 ---
 
 Matplotlib 是 Python 常用的第三方 2D 绘图库，是 Python 中最受欢迎的数据可视化软件包之一

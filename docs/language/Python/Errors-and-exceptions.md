@@ -4,8 +4,8 @@ slug: /python/errors-and-exceptions
 title: 错误和异常
 data: 2023-09-26
 authors: Kaiho
-tags: [python, language]
-keywords: [python, language]
+tags: [Python, language]
+keywords: [Python, language]
 ---
 错误一般可分为两种
 

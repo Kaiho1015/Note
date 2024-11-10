@@ -4,8 +4,8 @@ slug: /python/operator
 title: 运算符
 data: 2023-09-20
 authors: Kaiho
-tags: [python, language]
-keywords: [python, language]
+tags: [Python, language]
+keywords: [Python, language]
 ---
 
 运算符分为7种

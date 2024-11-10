@@ -4,8 +4,8 @@ slug: /python/regular-expression
 title: 正则表达式
 data: 2023-09-31
 authors: Kaiho
-tags: [python, language]
-keywords: [python, language]
+tags: [Python, language]
+keywords: [Python, language]
 
 ---
 

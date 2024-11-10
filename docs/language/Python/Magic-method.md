@@ -4,8 +4,8 @@ slug: /python/magic-method
 title: 魔术方法
 data: 2023-09-27
 authors: Kaiho
-tags: [python, language]
-keywords: [python, language]
+tags: [Python, language]
+keywords: [Python, language]
 ---
 魔术方法（也称为特殊方法）是一些以双下划线（`__`）开头和结尾的特殊方法，它们提供了一种在类中实现内置类型的操作或自定义行为的方式。
 

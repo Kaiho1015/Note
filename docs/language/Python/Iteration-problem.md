@@ -4,8 +4,8 @@ slug: /python/iteration-problem
 title: 常见迭代问题
 data: 2023-09-22
 authors: Kaiho
-tags: [python, language]
-keywords: [python, language]
+tags: [Python, language]
+keywords: [Python, language]
 ---
 
 在迭代过程中，列表、字典和集合会出现一些问题，主要是因为列表内存自动管理和修改字典或集合原数据的大小

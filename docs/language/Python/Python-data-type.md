@@ -4,8 +4,8 @@ slug: /python/python-data-type
 title: Python 标准数据类型
 data: 2023-09-17
 authors: Kaiho
-tags: [python, language]
-keywords: [python, language]
+tags: [Python, language]
+keywords: [Python, language]
 ---
 
 Python的标准数据类型分为以下几个

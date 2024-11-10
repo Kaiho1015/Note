@@ -4,8 +4,8 @@ slug: /python/closures-and-decorators
 title: 闭包和装饰器
 data: 2023-09-28
 authors: Kaiho
-tags: [python, language]
-keywords: [python, language]
+tags: [Python, language]
+keywords: [Python, language]
 ---
 ## 闭包(Closure)
 

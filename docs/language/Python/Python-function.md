@@ -4,8 +4,8 @@ slug: /python/python-function
 title: 函数
 data: 2023-09-23
 authors: Kaiho
-tags: [python, language]
-keywords: [python, language]
+tags: [Python, language]
+keywords: [Python, language]
 ---
 函数对任何编程语言都是极其重要的部分，这篇笔记包括自定义函数、参数传递、参数分类、匿名函数、封包与解包，以及高阶函数和递归函数
 

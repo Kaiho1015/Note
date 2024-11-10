@@ -50,6 +50,17 @@ const sidebars: SidebarsConfig = {
         'language/Python/matplotlib',
       ]
     },
+    // {
+    //   label: "JavaScript",
+    //   type: "category",
+    //   link: {
+    //     type: "generated-index",
+    //   },
+    //   items: [
+    //     'language/JavaScript/lexical-structure',
+    //     'language/JavaScript/expressions-and-operators',
+    //   ]
+    // },
   ],
 
   MLSiderbar: [

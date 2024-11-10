@@ -4,8 +4,8 @@ slug: /python/namespaces-and-scopes
 title: 命名空间和作用域
 data: 2023-09-24
 authors: Kaiho
-tags: [python, language]
-keywords: [python, language]
+tags: [Python, language]
+keywords: [Python, language]
 ---
 ## 命名空间
 

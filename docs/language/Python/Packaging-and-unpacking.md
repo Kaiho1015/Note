@@ -4,8 +4,8 @@ slug: /python/packaging-and-unpacking
 title: 封包和解包
 data: 2023-09-24
 authors: Kaiho
-tags: [python, language]
-keywords: [python, language]
+tags: [Python, language]
+keywords: [Python, language]
 ---
 封包和解包是很常见的操作，广泛应用于 Python 代码的编写中
 

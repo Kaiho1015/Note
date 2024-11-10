@@ -4,8 +4,8 @@ slug: /python/assignment-and-copying
 title: 赋值和拷贝
 data: 2023-09-19
 authors: Kaiho
-tags: [python, language]
-keywords: [python, language]
+tags: [Python, language]
+keywords: [Python, language]
 ---
 
 

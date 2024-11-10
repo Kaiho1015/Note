@@ -4,8 +4,8 @@ slug: /python/module-and-package
 title: 模块与包
 data: 2023-09-30
 authors: Kaiho
-tags: [python, language]
-keywords: [python, language]
+tags: [Python, language]
+keywords: [Python, language]
 ---
 ## 模块
 

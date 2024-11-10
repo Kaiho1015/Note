@@ -4,8 +4,8 @@ slug: /python/indexing-and-slicing
 title: 索引和切片
 data: 2023-09-18
 authors: Kaiho
-tags: [python, language]
-keywords: [python, language]
+tags: [Python, language]
+keywords: [Python, language]
 ---
 
 通过索引和切片的方式可以访问序列中的元素

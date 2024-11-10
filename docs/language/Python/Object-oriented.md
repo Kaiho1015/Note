@@ -4,8 +4,8 @@ slug: /python/object-oriented
 title: 面向对象
 data: 2023-09-25
 authors: Kaiho
-tags: [python, language]
-keywords: [python, language]
+tags: [Python, language]
+keywords: [Python, language]
 ---
 Python的面向对象编程（OOP）是一种编程范式，它使用“对象”来模拟现实世界中的事物
 
