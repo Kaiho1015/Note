@@ -33,5 +33,5 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
           source: "./build"
-          target: "/opt/1panel/apps/openresty/openresty/www/sites/note.qianhaipeng.com/index"
+          target: "/opt/1panel/apps/openresty/openresty/www/sites/qhp.us/index"
           strip_components: 2
