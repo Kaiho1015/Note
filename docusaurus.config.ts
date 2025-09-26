@@ -114,6 +114,10 @@ const config: Config = {
     //   indexName: 'kuizuo',
     // },
 
+    footer: {
+      copyright: `© ${new Date().getFullYear()} Kaiho's Note. Built with Docusaurus.<br/><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer" style="color: var(--ifm-color-emphasis-600); text-decoration: none;">浙ICP备2025178562号-1</a>`,
+    },
+
     prism: {
       theme: prismThemes.vsLight,
       darkTheme: prismThemes.vsDark,
