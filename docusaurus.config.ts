@@ -10,7 +10,7 @@ const config: Config = {
   favicon: 'img/logo.jpg',
   scripts: [
     {
-      src: "https://umami.qhp.us/script.js",
+      src: "https://umami.kaiho.cc/script.js",
       defer: true,
       'data-website-id': "471b3c74-5054-4b03-bbb0-1f379b60c917"
     }
